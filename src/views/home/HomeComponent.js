@@ -8,7 +8,6 @@ const Wrapper = styled.div`
   height: 100vh;
   width: 100vw;
   position: relative;
-  transition: 1s;
   ${(props) => `
   background:${props.styles.secondary};
 `}

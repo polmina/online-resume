@@ -7,13 +7,12 @@ const Wrapper = styled.div`
   border-radius: 0.2rem;
   position: absolute;
   display: flex;
-  transition: 1s;
   box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
     rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
   > div {
     flex: 1;
-    transition: 1s;
     border-radius: inherit;
+    overflow-y: auto;
   }
   ${(props) => `
       left: ${props.pos[0]}%;
