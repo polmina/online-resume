@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import Panel from "components/panel";
-import { useSelector, useDispatch } from "react-redux";
 import Title from "./title"
 const Wrapper = styled.div`
   padding: 1rem;
@@ -33,17 +32,11 @@ display: flex;
 `;
 const SkillsSubtitle = styled.div``;
 const Profile = (props) => {
-  const dispatch = useDispatch();
 
   return (
     <Panel pos={props.pos}>
       <Wrapper
-        onClick={() => {
-          dispatch({
-            type: "currentStyle",
-            value: "dark",
-          });
-        }}
+
       >
         <DescriptionWrapper>
           I am a quality obsessed and result-oriented developer with the will of

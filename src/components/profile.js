@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Panel from "components/panel";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 import style from "styles/style";
 import Image from "assets/profile-image.jpg"
 const Wrapper = styled.div`
@@ -31,19 +31,13 @@ const InfoWrapper = styled.div`
 }`;
 const InfoEl = styled.div``;
 const Profile = (props) => {
-  const dispatch = useDispatch();
   const data = useSelector((state) => state);
  
   return (
     <Panel pos={props.pos}>
       <Wrapper
         styles={style(data.currentStyle)}
-        onClick={() => {
-          dispatch({
-            type: "currentTemplate",
-            value: "two",
-          });
-        }}
+      
       >
         <ImageWrapper background={Image}>
           <div>Pol Miñana Ruiz</div>

@@ -21,14 +21,19 @@ const Wrapper = styled.div`
       bottom: ${100 - props.pos[3]}%;
       background:${props.styles.primary};
       color: ${props.styles.text};
+      ${props.addStyles}
   `}
 `;
 
-const Panel = ({ children, pos }) => {
+const Panel = ({ children, pos, addStyles }) => {
   const data = useSelector((state) => state);
 
   return (
-    <Wrapper pos={pos.split("/")} styles={style(data.currentStyle)}>
+    <Wrapper
+      pos={pos.split("/")}
+      styles={style(data.currentStyle)}
+      addStyles={addStyles}
+    >
       {children}
     </Wrapper>
   );

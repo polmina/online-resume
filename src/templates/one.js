@@ -4,5 +4,6 @@ export default [
   ["experience", "41/10/80/40"],
   ["studies", "41/41/80/71"],
   ["visit-button", "41/72/60/90"],
-  ["mix-button", "61/72/80/90"],
+  ["mix-button", "61/72/70/90"],
+  ["palette-button", "71/72/80/90"],
 ];
