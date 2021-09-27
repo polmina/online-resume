@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import Panel from "components/panel";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -25,19 +25,28 @@ const Wrapper = styled.div`
 `;
 
 const Profile = (props) => {
+  const [isButton, setIsButton] = useState(true);
+
   const dispatch = useDispatch();
   const currentTemplate = useSelector((state) => state.currentTemplate);
   const mixTemplate = () => {
+    setIsButton(false);
     let rand =
-      TEMPLATE_OPTIONS[Math.floor(Math.random() * TEMPLATE_OPTIONS.length)];;
+      TEMPLATE_OPTIONS[Math.floor(Math.random() * TEMPLATE_OPTIONS.length)];
     while (rand === currentTemplate) {
       rand =
         TEMPLATE_OPTIONS[Math.floor(Math.random() * TEMPLATE_OPTIONS.length)];
     }
-   dispatch({type:'currentTemplate',value:rand})
+    dispatch({ type: "currentTemplate", value: rand });
+    setIsButton(true);
   };
   return (
-    <Panel pos={props.pos}>
+    <Panel
+      pos={props.pos}
+      button={true}
+      button={isButton}
+      addStyles={!isButton ? "transform: translateY(5px)" : ""}
+    >
       <Wrapper styles={style}>
         <div onClick={mixTemplate}>
           <FontAwesomeIcon icon={faRandom} />

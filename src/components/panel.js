@@ -21,18 +21,26 @@ const Wrapper = styled.div`
       bottom: ${100 - props.pos[3]}%;
       background:${props.styles.primary};
       color: ${props.styles.text};
+      &:hover{
+        box-shadow:${
+          props.button
+            ? "rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset !important;"
+            : "inherit"
+        }
+      }
       ${props.addStyles}
   `}
 `;
 
-const Panel = ({ children, pos, addStyles }) => {
+const Panel = ({ children, pos, addStyles, button }) => {
   const data = useSelector((state) => state);
-
+  button = button ?? false;
   return (
     <Wrapper
       pos={pos.split("/")}
       styles={style(data.currentStyle)}
       addStyles={addStyles}
+      button={button}
     >
       {children}
     </Wrapper>
