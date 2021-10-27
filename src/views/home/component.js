@@ -3,7 +3,7 @@ import Description from "components/description";
 import Experience from "components/experience";
 import MixButton from "components/mix-button";
 import PaletteButton from "components/palette-button";
-
+import TechStack from "components/tech-stack";
 import Studies from "components/studies";
 import VisitButton from "components/visit-button";
 
@@ -16,5 +16,6 @@ export default (key, pos) => {
     "palette-button": <PaletteButton pos={pos} />,
     studies: <Studies pos={pos} />,
     "visit-button": <VisitButton pos={pos} />,
+    "tech-stack": <TechStack pos={pos} />,
   }[key];
 };

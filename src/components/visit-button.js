@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import Panel from "components/panel";
+import Panel from "components/shared/panel";
 import app from "firebase-config/firebase.js";
 import { getFirestore, onSnapshot, doc, updateDoc } from "firebase/firestore";
 
@@ -27,7 +27,7 @@ const Title = styled.div`
   text-align: center;
 `;
 
-const Profile = (props) => {
+const VisitButton = (props) => {
   const [num, setNum] = useState(null);
   const [isButton, setIsButton] = useState(true);
   const db = getFirestore(app);
@@ -55,7 +55,7 @@ const Profile = (props) => {
     <Panel
       pos={props.pos}
       button={isButton}
-      addStyles={!isButton ? "transform: translateY(5px)" : ""}
+      addStyles={!isButton ? "transform: translateY(10px)" : ""}
     >
       <Wrapper onClick={addNum}>
         <Number>{num}</Number>
@@ -68,4 +68,4 @@ const Profile = (props) => {
   );
 };
 
-export default Profile;
+export default VisitButton;

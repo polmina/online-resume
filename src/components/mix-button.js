@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import Panel from "components/panel";
+import Panel from "components/shared/panel";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faRandom } from "@fortawesome/free-solid-svg-icons";
+import MixWhite from "assets/mix-white.png";
+import MixBlack from "assets/mix-black.png";
 import style from "styles/style";
 import { useSelector, useDispatch } from "react-redux";
 const TEMPLATE_OPTIONS = ["one", "two"];
@@ -24,21 +26,29 @@ const Wrapper = styled.div`
   }
 `;
 
+const Icon = styled.img`
+  height: 3rem;
+  aspect-ratio: 1;
+`;
 const Profile = (props) => {
   const [isButton, setIsButton] = useState(true);
 
   const dispatch = useDispatch();
-  const currentTemplate = useSelector((state) => state.currentTemplate);
+  const state = useSelector((state) => state);
   const mixTemplate = () => {
     setIsButton(false);
     let rand =
       TEMPLATE_OPTIONS[Math.floor(Math.random() * TEMPLATE_OPTIONS.length)];
-    while (rand === currentTemplate) {
+    while (rand === state.currentTemplate) {
       rand =
         TEMPLATE_OPTIONS[Math.floor(Math.random() * TEMPLATE_OPTIONS.length)];
     }
     dispatch({ type: "currentTemplate", value: rand });
     setIsButton(true);
+  };
+  const icons = {
+    black: MixBlack,
+    white: MixWhite,
   };
   return (
     <Panel
@@ -49,7 +59,7 @@ const Profile = (props) => {
     >
       <Wrapper styles={style}>
         <div onClick={mixTemplate}>
-          <FontAwesomeIcon icon={faRandom} />
+          <Icon src={icons[style(state.currentStyle).text]} />
         </div>
       </Wrapper>
     </Panel>

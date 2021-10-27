@@ -1,9 +1,10 @@
 export default [
-  ["profile", "20/10/40/40"],
-  ["description", "20/41/40/90"],
-  ["experience", "41/10/80/40"],
-  ["studies", "41/41/80/71"],
-  ["visit-button", "41/72/60/90"],
-  ["mix-button", "61/72/70/90"],
-  ["palette-button", "71/72/80/90"],
+  ["profile", "5/10/30/70"],
+  ["description", "5/71/30/90"],
+  ["experience", "31/10/95/40"],
+  ["studies", "51/41/95/71"],
+  ["visit-button", "51/72/75/90"],
+  ["mix-button", "76/72/85/90"],
+  ["palette-button", "86/72/95/90"],
+  ["tech-stack", "31/41/50/90"],
 ];

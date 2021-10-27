@@ -14,3 +14,11 @@ function App() {
 }
 
 export default App;
+
+/*TODO:
+  - Add cookies to save state
+  - style skillbar with palette
+  - icons to profile 
+  - icons to titles
+  - Mobile view
+*/

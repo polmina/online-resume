@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Panel from "components/panel";
+import Panel from "components/shared/panel";
 import { useSelector } from "react-redux";
 import style from "styles/style";
 import Image from "assets/profile-image.jpg";
@@ -11,7 +11,7 @@ const Wrapper = styled.div`
 
 const ImageWrapper = styled.div`
   flex: 1;
-  background: url("https://as01.epimg.net/masdeporte/imagenes/2021/01/20/polideportivo/1611143860_208083_1611143995_noticia_normal_recorte1.jpg");
+  background: url("https://i1.wp.com/worldvisionit.com/wp-content/uploads/2019/02/kisspng-computer-icons-avatar-male-super-b-5ac405d55a6662.3429953115227959893703.png?fit=512%2C512&ssl=1");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -40,10 +40,26 @@ const Profile = (props) => {
           <div>Pol Miñana Ruiz</div>
         </ImageWrapper>
         <InfoWrapper>
-          <InfoEl>(+34) 682 89 06 00</InfoEl>
-          <InfoEl>pol.minana.ruiz@gmail.com</InfoEl>
-          <InfoEl>Spain</InfoEl>
-          <InfoEl>www.linkedin.com/in/pol.minana.ruiz</InfoEl>
+          <InfoEl>
+            <a href="tel:+34682890600" target="_blank">
+              (+34) 682 89 06 00
+            </a>
+          </InfoEl>
+          <InfoEl>
+            <a href="mailto:pol.minana.ruiz@gmail.com" target="_blank">
+              pol.minana.ruiz@gmail.com
+            </a>
+          </InfoEl>
+          <InfoEl>
+            <a href="https://www.google.es/maps/place/Spain/" target="_blank">
+              Spain
+            </a>
+          </InfoEl>
+          <InfoEl>
+            <a href="https://linkedin.com/in/pol.minana.ruiz" target="_blank">
+              https://linkedin.com/in/pol.minana.ruiz
+            </a>
+          </InfoEl>
         </InfoWrapper>
       </Wrapper>
     </Panel>

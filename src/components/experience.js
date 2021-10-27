@@ -1,14 +1,13 @@
 import React from "react";
 import styled from "styled-components";
-import Panel from "components/panel";
+import Panel from "components/shared/panel";
 import Title from "./title";
 
 const Wrapper = styled.div`
   padding: 1rem;
 `;
 const Main = styled.div`
-
-  >div:last-child{
+  > div:last-child {
     border: 0;
   }
 `;
@@ -29,7 +28,7 @@ const ItemCompany = styled.div`
 const ItemDate = styled.div`
   border-left: 1px solid grey;
   padding: 0 0.5rem;
-  transform: skewX(-15deg)
+  transform: skewX(-15deg);
 `;
 
 const loadExperiences = (experiences) => {

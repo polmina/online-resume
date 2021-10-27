@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Panel from "components/panel";
+import Panel from "components/shared/panel";
 import Title from "./title";
 
 const Wrapper = styled.div`
@@ -83,5 +83,4 @@ const experiences = [
     country: "Spain",
     date: "2017-2019",
   },
- 
 ];
