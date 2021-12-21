@@ -11,9 +11,9 @@ const Wrapper = styled.div`
 
 const ImageWrapper = styled.div`
   flex: 1;
-  background: url("https://i1.wp.com/worldvisionit.com/wp-content/uploads/2019/02/kisspng-computer-icons-avatar-male-super-b-5ac405d55a6662.3429953115227959893703.png?fit=512%2C512&ssl=1");
+  background: url("https://media.istockphoto.com/vectors/default-avatar-profile-icon-grey-photo-placeholder-hand-drawn-modern-vector-id1273297997?k=20&m=1273297997&s=170667a&w=0&h=PBlcNpZMD4WQkX_Ot6kOY1_WxuKc2MARNWbfbtRo8vk=");
   background-position: center;
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   position: relative;
   border-radius: inherit;
@@ -41,13 +41,8 @@ const Profile = (props) => {
         </ImageWrapper>
         <InfoWrapper>
           <InfoEl>
-            <a href="tel:+34682890600" target="_blank">
-              (+34) 682 89 06 00
-            </a>
-          </InfoEl>
-          <InfoEl>
-            <a href="mailto:pol.minana.ruiz@gmail.com" target="_blank">
-              pol.minana.ruiz@gmail.com
+            <a href="mailto:pol.minana.ruiz[at]gmail.com" target="_blank">
+              pol.minana.ruiz[at]gmail.com
             </a>
           </InfoEl>
           <InfoEl>
