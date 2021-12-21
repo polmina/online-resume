@@ -2,10 +2,11 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import Panel from "components/shared/panel";
 import style from "styles/style";
+import ReactTooltip from "react-tooltip";
 import { useSelector, useDispatch } from "react-redux";
 import PaletteWhite from "assets/palette-white.png";
 import PaletteBlack from "assets/palette-black.png";
-const TEMPLATE_OPTIONS = ["light", "dark", "red"];
+const TEMPLATE_OPTIONS = ["light", "dark", "red", "green", "blue"];
 
 const Wrapper = styled.div`
   display: flex;
@@ -55,10 +56,11 @@ const Profile = (props) => {
       button={isButton}
       addStyles={!isButton ? "transform: translateY(5px)" : ""}
     >
-      <Wrapper styles={style}>
+      <Wrapper styles={style} data-tip="Random palette 🎨!">
         <div onClick={mixTemplate}>
           <Icon src={icons[style(state.currentStyle).text]} />
         </div>
+        <ReactTooltip />
       </Wrapper>
     </Panel>
   );

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import Panel from "components/shared/panel";
 import app from "firebase-config/firebase.js";
+import ReactTooltip from "react-tooltip";
 import { getFirestore, onSnapshot, doc, updateDoc } from "firebase/firestore";
 
 const Wrapper = styled.div`
@@ -57,13 +58,17 @@ const VisitButton = (props) => {
       button={isButton}
       addStyles={!isButton ? "transform: translateY(10px)" : ""}
     >
-      <Wrapper onClick={addNum}>
+      <Wrapper
+        onClick={addNum}
+        data-tip="Hit me for a super fun experience and increase the visitor counter 🎉!"
+      >
         <Number>{num}</Number>
         <Title>
           Hit
           <br /> me!
         </Title>
       </Wrapper>
+      <ReactTooltip />
     </Panel>
   );
 };

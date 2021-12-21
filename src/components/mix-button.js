@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import Panel from "components/shared/panel";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faRandom } from "@fortawesome/free-solid-svg-icons";
+import ReactTooltip from "react-tooltip";
 import MixWhite from "assets/mix-white.png";
 import MixBlack from "assets/mix-black.png";
 import style from "styles/style";
@@ -57,10 +56,11 @@ const Profile = (props) => {
       button={isButton}
       addStyles={!isButton ? "transform: translateY(5px)" : ""}
     >
-      <Wrapper styles={style}>
+      <Wrapper styles={style} data-tip="Random layout 👷‍♂️!">
         <div onClick={mixTemplate}>
           <Icon src={icons[style(state.currentStyle).text]} />
         </div>
+        <ReactTooltip />
       </Wrapper>
     </Panel>
   );
