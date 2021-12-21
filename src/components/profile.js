@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Panel from "components/shared/panel";
+import ReactTooltip from "react-tooltip";
 import { useSelector } from "react-redux";
 import style from "styles/style";
 import Image from "assets/profile-image.jpg";
@@ -29,7 +30,11 @@ const InfoWrapper = styled.div`
     margin: 0.5rem 1rem;
   }
 `;
-const InfoEl = styled.div``;
+const InfoEl = styled.div`
+  &:hover {
+    font-weight: bold;
+  }
+`;
 const Profile = (props) => {
   const data = useSelector((state) => state);
 
@@ -37,22 +42,29 @@ const Profile = (props) => {
     <Panel pos={props.pos}>
       <Wrapper styles={style(data.currentStyle)}>
         <ImageWrapper background={Image}>
-          <div>Pol Miñana Ruiz</div>
+          <div data-tip="This is me, btw">
+            Pol Miñana Ruiz <ReactTooltip />
+          </div>
         </ImageWrapper>
         <InfoWrapper>
+          <div>pol.minana.ruiz[at]gmail.com</div>
           <InfoEl>
-            <a href="mailto:pol.minana.ruiz[at]gmail.com" target="_blank">
-              pol.minana.ruiz[at]gmail.com
+            <a
+              href="https://www.google.es/maps/place/Spain/"
+              target="_blank"
+              data-tip="Paella, toros y olé ! "
+            >
+              Spain <ReactTooltip />
             </a>
           </InfoEl>
           <InfoEl>
-            <a href="https://www.google.es/maps/place/Spain/" target="_blank">
-              Spain
-            </a>
-          </InfoEl>
-          <InfoEl>
-            <a href="https://linkedin.com/in/pol.minana.ruiz" target="_blank">
+            <a
+              href="https://www.linkedin.com/in/pol-mi%C3%B1ana-ruiz/"
+              target="_blank"
+              data-tip="Know more about me!"
+            >
               https://linkedin.com/in/pol.minana.ruiz
+              <ReactTooltip />
             </a>
           </InfoEl>
         </InfoWrapper>
