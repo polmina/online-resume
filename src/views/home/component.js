@@ -9,12 +9,12 @@ import VisitButton from "components/visit-button";
 
 export default (key, pos) => {
   return {
-    profile: <Profile pos={pos} />,
-    description: <Description pos={pos} />,
-    experience: <Experience pos={pos} />,
+    "profile": <Profile pos={pos} />,
+    "description": <Description pos={pos} />,
+    "experience": <Experience pos={pos} />,
     "mix-button": <MixButton pos={pos} />,
     "palette-button": <PaletteButton pos={pos} />,
-    studies: <Studies pos={pos} />,
+    "studies": <Studies pos={pos} />,
     "visit-button": <VisitButton pos={pos} />,
     "tech-stack": <TechStack pos={pos} />,
   }[key];

@@ -12,9 +12,9 @@ const Wrapper = styled.div`
 
 const ImageWrapper = styled.div`
   flex: 1;
-  background: url("https://media.istockphoto.com/vectors/default-avatar-profile-icon-grey-photo-placeholder-hand-drawn-modern-vector-id1273297997?k=20&m=1273297997&s=170667a&w=0&h=PBlcNpZMD4WQkX_Ot6kOY1_WxuKc2MARNWbfbtRo8vk=");
+  background: url("${Image}");
   background-position: center;
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   position: relative;
   border-radius: inherit;
@@ -35,6 +35,11 @@ const InfoEl = styled.div`
     font-weight: bold;
   }
 `;
+const Name = styled.div`
+  color: white;
+  cursor: default;
+  background: rgba(0,0,0,.3);
+`
 const Profile = (props) => {
   const data = useSelector((state) => state);
 
@@ -42,19 +47,19 @@ const Profile = (props) => {
     <Panel pos={props.pos}>
       <Wrapper styles={style(data.currentStyle)}>
         <ImageWrapper background={Image}>
-          <div data-tip="This is me, btw">
+          <Name data-tip="This is me, btw">
             Pol Miñana Ruiz <ReactTooltip />
-          </div>
+          </Name>
         </ImageWrapper>
         <InfoWrapper>
-          <div>pol.minana.ruiz[at]gmail.com</div>
+          <div>💌 pol.minana.ruiz[at]gmail.com</div>
           <InfoEl>
             <a
               href="https://www.google.es/maps/place/Spain/"
               target="_blank"
               data-tip="Paella, toros y olé ! "
             >
-              Spain <ReactTooltip />
+              🌏 Spain <ReactTooltip />
             </a>
           </InfoEl>
           <InfoEl>
@@ -63,7 +68,7 @@ const Profile = (props) => {
               target="_blank"
               data-tip="Know more about me!"
             >
-              https://linkedin.com/in/pol.minana.ruiz
+              🟦 https://linkedin.com/in/pol.minana.ruiz
               <ReactTooltip />
             </a>
           </InfoEl>

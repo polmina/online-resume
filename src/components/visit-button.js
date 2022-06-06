@@ -56,7 +56,6 @@ const VisitButton = (props) => {
     <Panel
       pos={props.pos}
       button={isButton}
-      addStyles={!isButton ? "transform: translateY(10px)" : ""}
     >
       <Wrapper
         onClick={addNum}

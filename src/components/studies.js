@@ -63,6 +63,13 @@ export default education;
 
 const experiences = [
   {
+    title: "Amazon Web Services Cloud Practitioner",
+
+    company: "Amazon Web Services",
+    country: "Spain",
+    date: "Feb 2022",
+  },
+  {
     title: "Computer Science",
 
     company: "Universitat Oberta de Catalunya",
@@ -77,7 +84,7 @@ const experiences = [
     date: "2019-2020",
   },
   {
-    title: "AHigher technician in multiplatform development",
+    title: "Higher technician in multiplatform development",
 
     company: "HappyCustomerBox",
     country: "Spain",

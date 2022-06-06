@@ -63,14 +63,28 @@ export default Experience;
 
 const experiences = [
   {
+    title: "Senior Fullstack Developer",
+    description: `Working with ExpressJS & ReactJS & AWS for an end-to-end development. `,
+    company: "Wheelhub.es",
+    country: "Spain",
+    date: "2022 - Present",
+  },
+  {
+    title: "Fullstack Developer",
+    description: `I help develop a mobile application made with React-native and hosted on AWS. Backbone made of serverless computing`,
+    company: "KiKi Social",
+    country: "USA",
+    date: "2021 - Present (Part Time)",
+  },
+  {
     title: "Tech Lead",
     description: `I am leading the digital transformation of the company, from
                   traditional to a fully automated service with infinite scalability.
                   MongoDB, ExpressJS, ReactJS, NodeJS, with Heroku and AWS for
-                  the microservices pattern.`,
+                  serverless computing.`,
     company: "Pongomilogo.es",
     country: "Spain",
-    date: "2021 - Present",
+    date: "2021 - 2022",
   },
   {
     title: "Tech Lead",

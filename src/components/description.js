@@ -15,8 +15,10 @@ const Profile = (props) => {
         <Title value="About me" />
 
         <DescriptionWrapper>
-          I am a quality obsessed and result-oriented developer with the will of
-          being constantly learning about new technologies
+          I am a quality-obsessed and result-oriented developer with the will of
+          being constantly learning about new technologies.
+
+          Right now headed towards becoming a Solutions Architect by AWS.
         </DescriptionWrapper>
       </Wrapper>
     </Panel>
