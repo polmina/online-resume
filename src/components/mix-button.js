@@ -52,7 +52,6 @@ const Profile = (props) => {
   return (
     <Panel
       pos={props.pos}
-      button={true}
       button={isButton}
       addStyles={!isButton ? "transform: translateY(5px)" : ""}
     >

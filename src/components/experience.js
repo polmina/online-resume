@@ -18,17 +18,15 @@ const ItemRow = styled.div`
 const ItemTitle = styled.div`
   font-weight: bold;
   font-size: 1.3rem;
+  margin: 0 0.5rem 0 0;
 `;
 const ItemDescription = styled.div`
   padding: 0.5rem;
 `;
 const ItemCompany = styled.div`
-  margin: 0 0.5rem 0 0;
 `;
 const ItemDate = styled.div`
-  border-left: 1px solid grey;
-  padding: 0 0.5rem;
-  transform: skewX(-15deg);
+  transform: skewX(-15deg) translateY(4px);
 `;
 
 const loadExperiences = (experiences) => {
@@ -36,11 +34,11 @@ const loadExperiences = (experiences) => {
   experiences.forEach((experience) => {
     views.push(
       <ItemRow>
-        <ItemTitle>{experience.title}</ItemTitle>
         <div style={{ display: "flex" }}>
-          <ItemCompany>{experience.company}</ItemCompany>
+          <ItemTitle>{experience.company}</ItemTitle>
           <ItemDate>{experience.date}</ItemDate>
         </div>
+          <ItemCompany>{experience.title}</ItemCompany>
         <ItemDescription>{experience.description}</ItemDescription>
       </ItemRow>
     );
@@ -63,22 +61,29 @@ export default Experience;
 
 const experiences = [
   {
-    title: "Senior Fullstack Developer",
-    description: `Working with ExpressJS & ReactJS & AWS for an end-to-end development. `,
-    company: "Wheelhub.es",
+    title: "Software Development Engineer",
+    description: "Worked across several teams and full-stack technologies developing applications serving users worldwide",
+    company: "Amazon",
     country: "Spain",
-    date: "2022 - Present",
+    date: "2023 - Present",
   },
   {
     title: "Fullstack Developer",
-    description: `I help develop a mobile application made with React-native and hosted on AWS. Backbone made of serverless computing`,
+    description: `Working with ExpressJS & ReactJS & AWS for an end-to-end development. `,
+    company: "Wheelhub.es",
+    country: "Spain",
+    date: "2022 - 2023",
+  },
+  {
+    title: "Fullstack Developer (part-time)",
+    description: `I develop a mobile application made with React-native and hosted on AWS. Backbone made with serverless computing`,
     company: "KiKi Social",
-    country: "USA",
-    date: "2021 - Present (Part Time)",
+    country: "USA (remote)",
+    date: "2021 - 2023",
   },
   {
     title: "Tech Lead",
-    description: `I am leading the digital transformation of the company, from
+    description: `I led the digital transformation of the company, from
                   traditional to a fully automated service with infinite scalability.
                   MongoDB, ExpressJS, ReactJS, NodeJS, with Heroku and AWS for
                   serverless computing.`,
